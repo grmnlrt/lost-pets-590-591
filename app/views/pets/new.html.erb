@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h1>Add a new pet</h1>
+
+      <%= simple_form_for @pet do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :found_on %>
+        <%= f.input :species, collection: Pet::SPECIES %>
+        <%= f.submit class: 'btn btn-primary mt-3' %>
+      <% end %>
+    </div>
+  </div>
+</div>

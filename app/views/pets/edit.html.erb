@@ -1,0 +1,13 @@
+<h1>Update <%= @pet.name %></h1>
+
+<%= form_for @pet do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :found_on %>
+  <%= f.date_field :found_on %>
+  <%= f.label :species %>
+  <%= f.select :species, Pet::SPECIES %>
+  <%= f.submit %>
+<% end %>
